@@ -5,12 +5,11 @@
 # create data structure
 
 class Node:
-    def __init__(self,val):
+    def __init__(self, val):
         self.val = val
         self.next = None
 
-
-# do recursivley
+# do recursively
 
 def getSumrecurr(head):
     if head is None:
@@ -19,15 +18,17 @@ def getSumrecurr(head):
     sum += current
     getSumrecurr(head.next)
 
-# itterative version
-def getsum(head):
-   sum = 0
-   current = head
-   while current is not None:
-       sum += current.val
-       current = current.next
 
-   return sum
+# iterative version
+def getsum(head):
+    sum = 0
+    current = head
+    while current is not None:
+        sum += current.val
+        current = current.next
+
+    return sum
+
 
 def main():
     a = Node(1)
@@ -38,8 +39,6 @@ def main():
     c.next = b
     print(getsum(a))
 
+
 if __name__ == '__main__':
     main()
-
-
-    
