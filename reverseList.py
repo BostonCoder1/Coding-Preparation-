@@ -7,16 +7,16 @@ class Node:
     def __init__(self, val):
         self.val = val
         self.next = None
-# a-> b -> c -> d
+# a->b->None 
+# b->a->None
 def getReverse(head):
     prev = None
-    current = head    #a
+    current = head
     while current is not None:
-        temp = current.next   # temp = b
-        current.next = prev
-        prev = current
-        current = temp
-    return prev.val
+        next = current.next  #b
+        current.next = prev  # None
+        prev = current       # a
+        current = next       # b
 
 
 
