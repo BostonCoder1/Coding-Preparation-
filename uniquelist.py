@@ -18,8 +18,6 @@ def recurr(head, prev_val):
     return True
   if head.val == prev_val:
     return True
-  s = head.val
-  k = prev-val
   if head.val != prev_val:
      return False
   return recurr(head.next, head.val)
